@@ -1,0 +1,14 @@
+[general]
+# Enable Conventional Commit standards
+contrib=contrib-title-conventional-commits
+
+# Ignore rules
+ignore=title-trailing-punctuation, body-is-missing
+
+# Title rules
+[title-max-length]
+line-length=120
+
+# Body rules
+[body-max-line-length]
+line-length=120

@@ -1,0 +1,18 @@
+title: AI Debate Tool
+description: Track the progress of the AI Debate Tool project.
+theme: lanyon
+baseurl: "/ai-debate-tool"
+url: "https://DwayneWilkes.github.io"
+
+social_links:
+    github: https://github.com/DwayneWilkes/ai-debate-tool
+
+nav:
+    - Home: /
+    - About: /about
+    - Changelog: /changelog
+
+plugins:
+    - jekyll-seo-tag
+    - jekyll-sitemap
+    - jekyll-feed
