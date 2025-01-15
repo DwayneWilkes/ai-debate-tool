@@ -1,1 +1,1 @@
-"# ai-debate-tool" 
+# ai-debate-tool
