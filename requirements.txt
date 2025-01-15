@@ -1,0 +1,6 @@
+gitlint
+pre-commit
+flask
+flask-testing
+pytest
+openai
