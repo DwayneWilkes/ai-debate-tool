@@ -1,25 +1,27 @@
-# Virtual environment directories
-*env*/
-
 # Python cache and compiled files
 __pycache__/
 *.py[cod]
 
-# Testing-related files
+# Virtual environment directories
+*env*/
+
+# Testing-related files and directories
 .pytest_cache/
+tests/
 
 # Log files
 *.log
 
+# Git and version control
+.git/
+.gitignore
+
 # IDE-specific directories
 .vscode/
+.idea/
 
 # macOS system files
 .DS_Store
 
-# Docker-related files
-*.env
+# Docker-specific overrides
 docker-compose.override.yml
-
-# Custom directories
-ignore/
