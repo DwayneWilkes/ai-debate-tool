@@ -27,4 +27,4 @@ tests/
 docker-compose.override.yml
 
 # Custom directories
-ignore/
+.ignore/
