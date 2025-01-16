@@ -25,3 +25,6 @@ tests/
 
 # Docker-specific overrides
 docker-compose.override.yml
+
+# Custom directories
+ignore/
