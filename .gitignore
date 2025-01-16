@@ -1,9 +1,18 @@
-*venv*/
-__pycache__/
-*.pyc
-*.pyo
-*.log
-.DS_Store
+# Virtual environment directories
+*env*/
 
-.vscode/
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Testing-related files
 .pytest_cache/
+
+# Log files
+*.log
+
+# IDE-specific directories
+.vscode/
+
+# macOS system files
+.DS_Store
