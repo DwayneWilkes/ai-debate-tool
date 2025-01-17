@@ -5,6 +5,11 @@ title: Changelog
 
 # Changelog
 
+## January 16, 2025
+
+- Added a base APIClient class for making API requests to OpenAI and Anthropic.
+- Added unit tests for the APIClient class.
+
 ## January 15, 2025
 
 - Added tasks.py for building and running the project.
