@@ -5,6 +5,11 @@ title: Changelog
 
 # Changelog
 
+## January 17, 2025
+
+- Added Consultant, Debater, and Interactive Debater Experts frameworks.
+  - Implemented respective prompts from <https://arxiv.org/pdf/2402.06782>.
+
 ## January 16, 2025
 
 - Added a base APIClient class for making API requests to OpenAI and Anthropic.
