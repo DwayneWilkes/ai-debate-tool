@@ -93,8 +93,7 @@ class Debater(APIClient):
         Returns:
             str: The constructed argument.
         """
-        self._current_round += 1
-        if self._current_round == 1:
+        if self._current_round == 0:
             self._current_argument = self._protocol.user_request.substitute(
                 story=story,
                 transcript=transcript,
@@ -112,10 +111,11 @@ class Debater(APIClient):
                     question=self._question, answer_defending=self._answer_defending
                 ),
                 thinking_advice=self._thinking_advice[
-                    "second_round_thinking" if self._current_round == 2 else "nth_round_thinking"
+                    "second_round_thinking" if self._current_round == 1 else "nth_round_thinking"
                 ],
                 word_limit=self._word_limit,
             )
+        self._current_round += 1
 
         return self._current_argument
 
