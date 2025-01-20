@@ -5,6 +5,11 @@ title: Changelog
 
 # Changelog
 
+## January 19, 2025
+
+- Refactored Expert (Consultant, Debater, InteractiveDebater) round counting logic.
+- Added unit tests for Expert classes.
+
 ## January 17, 2025
 
 - Added Consultant, Debater, and Interactive Debater Experts frameworks.
