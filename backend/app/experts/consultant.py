@@ -30,14 +30,7 @@ class Consultant(APIClient):
             Constructs an argument based on the current round and returns the argument template.
     """
 
-    def __init__(
-        self,
-        api_key: str,
-        provider: str,
-        model: str,
-        name: str,
-        word_limit: int = 100,
-    ):
+    def __init__(self, api_key: str, provider: str, model: str, name: str, word_limit: int = 100):
         super().__init__(api_key, provider, model)
 
         self._protocol = consultant
@@ -47,7 +40,7 @@ class Consultant(APIClient):
         self._thinking_advice = self._protocol.thinking_advice
         self._current_round = 0
 
-    def initial_position(self, question: str, answer_defending: str, answer_opposing: str):
+    def initial_position(self, question: str, answer_defending: str, answer_opposing: str) -> str:
         """
         Sets the initial position for the debate by storing the question and the answers for defending and opposing positions.
 
@@ -63,12 +56,10 @@ class Consultant(APIClient):
         self._answer_defending = answer_defending
         self._answer_opposing = answer_opposing
         return self._protocol.user_question.substitute(
-            question=self._question,
-            answer_defending=self._answer_defending,
-            answer_opposing=self._answer_opposing,
+            question=self._question, answer_defending=self._answer_defending, answer_opposing=self._answer_opposing
         )
 
-    def initial_response(self):
+    def initial_response(self) -> str:
         """
         Generates the initial response from the assistant based on the provided question
         and answers.
@@ -77,12 +68,10 @@ class Consultant(APIClient):
             str: The formatted initial response from the assistant.
         """
         return self._protocol.assistant_response.substitute(
-            question=self._question,
-            answer_defending=self._answer_defending,
-            answer_opposing=self._answer_opposing,
+            question=self._question, answer_defending=self._answer_defending, answer_opposing=self._answer_opposing
         )
 
-    def construct_argument(self, story: str, transcript: str):
+    def construct_argument(self, story: str, transcript: str) -> str:
         """
         Constructs an argument based on the provided story and transcript.
         This method increments the current round counter and constructs an argument

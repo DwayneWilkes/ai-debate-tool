@@ -134,9 +134,7 @@ class BaseExpertTest(unittest.TestCase):
         This implementation is shared by Consultant and Debater, but overridden by IDebater.
         """
         result = self.base.expert.initial_position(
-            self.base.expert._question,
-            self.base.expert._answer_defending,
-            self.base.expert._answer_opposing,
+            self.base.expert._question, self.base.expert._answer_defending, self.base.expert._answer_opposing
         )
         self.assertEqual(result, self.base.USR_Q)
         self.base.expert._protocol.user_question.substitute.assert_called_once_with(
