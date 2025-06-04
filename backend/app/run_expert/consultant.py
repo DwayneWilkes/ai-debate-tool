@@ -5,7 +5,7 @@ import os
 
 def setup():
     # load data
-    data = data = pd.read_json("data/QuALITY.v1.0.1/QuALITY.v1.0.1.htmlstripped.dev", lines=True)
+    data = pd.read_json("data/QuALITY.v1.0.1/QuALITY.v1.0.1.dev", lines=True)
     consultant = Consultant(
         api_key=os.getenv("OPENAI_API_KEY"),
         provider="openai",

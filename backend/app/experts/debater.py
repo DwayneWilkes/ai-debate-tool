@@ -167,9 +167,9 @@ class IDebater(Debater):
 
         self._answer_a = answer_defending.get("A") or answer_opposing.get("A")
         self._answer_b = answer_defending.get("B") or answer_opposing.get("B")
-        self._answer_defending_letter = "A" if self._answer_a is answer_defending.get("A") else "B"
+        self._answer_defending_letter = "A" if self._answer_a == answer_defending.get("A") else "B"
         self._answer_defending = answer_defending[self._answer_defending_letter]
-        self._answer_opposing_letter = "A" if self._answer_a is answer_opposing.get("A") else "B"
+        self._answer_opposing_letter = "A" if self._answer_a == answer_opposing.get("A") else "B"
         self._answer_opposing = answer_opposing[self._answer_opposing_letter]
         return self._protocol.user_question.substitute(
             question=self._question,
